@@ -3,6 +3,7 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
+        android:background="@drawable/palm4"
         android:layout_height="match_parent"
         tools:context=".activitys.HistoryDetailsActivity">
 
@@ -32,14 +33,14 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.6"
-                    android:background="@color/divider_grey">
+                    >
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:gravity="center"
-                        android:text="Emp id"
+                        android:text="booking id"
                         android:textColor="@color/black"
                         android:textSize="15sp" />
 
@@ -55,7 +56,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:gravity="center"
+                        android:gravity="end"
                         android:text=""
                         android:textColor="@color/black"
                         android:textSize="15sp"
@@ -81,14 +82,14 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.6"
-                    android:background="@color/divider_grey">
+                    >
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:gravity="center"
-                        android:text="Emp Name"
+                        android:text="E-mail"
                         android:textColor="@color/black"
                         android:textSize="15sp" />
 
@@ -104,7 +105,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:gravity="center"
+                        android:gravity="end"
                         android:text=""
                         android:textColor="@color/black"
                         android:textSize="15sp"
@@ -131,14 +132,14 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.6"
-                    android:background="@color/divider_grey">
+                    >
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:gravity="center"
-                        android:text="Emp Age"
+                        android:text="Name"
                         android:textColor="@color/black"
                         android:textSize="15sp"
 
@@ -157,7 +158,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:gravity="center"
+                        android:gravity="end"
                         android:text=""
                         android:textColor="@color/black"
                         android:textSize="15sp"
@@ -185,7 +186,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.6"
-                    android:background="@color/divider_grey">
+                    >
 
                     <TextView
                         android:layout_width="match_parent"
@@ -193,7 +194,7 @@
                         android:layout_gravity="center"
 
                         android:gravity="center"
-                        android:text="Emp Salary"
+                        android:text="Second Name"
                         android:textColor="@color/black"
                         android:textSize="15sp"
 
@@ -212,7 +213,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:gravity="center"
+                        android:gravity="end"
                         android:text=""
                         android:textColor="@color/black"
                         android:textSize="15sp"

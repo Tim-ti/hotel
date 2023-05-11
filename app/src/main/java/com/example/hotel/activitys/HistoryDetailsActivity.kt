@@ -28,19 +28,14 @@ class HistoryDetailsActivity : AppCompatActivity() {
         tvEmpName = findViewById(R.id.tvEmpName)
         tvEmpAge = findViewById(R.id.tvEmpAge)
         tvEmpSalary = findViewById(R.id.tvEmpSalary)
-        tvEmpSalary = findViewById(R.id.tvEmpSalary)
-        tvEmpSalary = findViewById(R.id.tvEmpSalary)
+
     }
 
     private fun setValuesToViews() {
-        tvEmpId.text = intent.getStringExtra("empId")
-        tvEmpName.text = intent.getStringExtra("empName")
-        tvEmpAge.text = intent.getStringExtra("empAge")
-        tvEmpAge.text = intent.getStringExtra("empAge")
-        tvEmpAge.text = intent.getStringExtra("empAge")
-        tvEmpAge.text = intent.getStringExtra("empAge")
-        tvEmpAge.text = intent.getStringExtra("empAge")
-        tvEmpSalary.text = intent.getStringExtra("empSalary")
+        tvEmpId.text = intent.getStringExtra("bookingId")
+        tvEmpName.text = intent.getStringExtra("Email")
+        tvEmpAge.text = intent.getStringExtra("Name")
+        tvEmpSalary.text = intent.getStringExtra("SecName")
 
     }
 }

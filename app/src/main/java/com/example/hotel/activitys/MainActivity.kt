@@ -32,17 +32,11 @@ class MainActivity : AppCompatActivity() {
             finish()
         }
         binding.signOut.setOnClickListener {
-            auth.signOut()
-            binding.userDetails.text = updateData()
+            startActivity(Intent(this, RegisterActivity::class.java))
+            finish()
+
         }
     }
 
-    override fun onResume() {
-        super.onResume()
-        binding.userDetails.text = updateData()
-    }
 
-    private fun updateData(): String{
-        return "Email : ${auth.currentUser?.email}"
-    }
 }
