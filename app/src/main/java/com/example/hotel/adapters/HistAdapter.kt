@@ -9,7 +9,7 @@ import com.example.hotel.R
 import com.example.hotel.models.BookingModel
 
 class HistAdapter (private val histList: ArrayList<BookingModel>) :
-    RecyclerView.Adapter<HistAdapter.BookingListHolder>() {
+    RecyclerView.Adapter<HistAdapter.BookingViewHolder>() {
 
     private lateinit var mListener: onItemClickListener
 
@@ -21,12 +21,12 @@ class HistAdapter (private val histList: ArrayList<BookingModel>) :
         mListener = clickListener
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BookingListHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BookingViewHolder {
         val itemView = LayoutInflater.from(parent.context).inflate(R.layout.emp_list_item, parent, false)
-        return BookingListHolder(itemView, mListener)
+        return BookingViewHolder(itemView, mListener)
     }
 
-    override fun onBindViewHolder(holder: BookingListHolder, position: Int) {
+    override fun onBindViewHolder(holder: BookingViewHolder, position: Int) {
         val currentEmp = histList[position]
         holder.tvEmpName.text = currentEmp.name
     }
@@ -35,7 +35,7 @@ class HistAdapter (private val histList: ArrayList<BookingModel>) :
         return histList.size
     }
 
-    class BookingListHolder(itemView: View, clickListener: onItemClickListener) : RecyclerView.ViewHolder(itemView) {
+    class BookingViewHolder(itemView: View, clickListener: onItemClickListener) : RecyclerView.ViewHolder(itemView) {
 
         val tvEmpName : TextView = itemView.findViewById(R.id.tvEmpName)
 

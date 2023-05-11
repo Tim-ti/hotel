@@ -1,9 +1,10 @@
 package com.example.hotel.models
 
 data class BookingModel(
-    var bookingId: String? = null,
-    var email: String? = null,
-    var name: String? = null,
-    var secName: String? = null
-
+    var id: String,
+    var email: String,
+    var name: String,
+    var secName: String,
+    var date: String,
+    var hotelId: Int
 )

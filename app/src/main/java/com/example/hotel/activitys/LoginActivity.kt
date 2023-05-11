@@ -19,6 +19,7 @@ class LoginActivity : AppCompatActivity() {
         }
 
         binding.loginBtn.setOnClickListener {
+            startActivity(Intent(this, HotelMenuActivity::class.java))
             val email = binding.emailLogin.text.toString()
             val password = binding.passwordLogin.text.toString()
             if(email.isNotEmpty() && password.isNotEmpty())

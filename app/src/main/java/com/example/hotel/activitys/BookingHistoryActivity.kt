@@ -57,10 +57,10 @@ class BookingHistoryActivity : AppCompatActivity() {
                             val intent = Intent(this@BookingHistoryActivity, HistoryDetailsActivity::class.java)
 
 
-                            intent.putExtra("empId", histList[position].bookingId)
-                            intent.putExtra("empName", histList[position].email)
-                            intent.putExtra("empAge", histList[position].name)
-                            intent.putExtra("empSalary", histList[position].secName)
+                            intent.putExtra("empId", histList[position].id)
+                            intent.putExtra("Email", histList[position].email)
+                            intent.putExtra("Name", histList[position].name)
+                            intent.putExtra("SecName", histList[position].secName)
                             startActivity(intent)
                         }
 

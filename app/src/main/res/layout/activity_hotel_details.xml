@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/cool_bg"
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/hicon1" />
+
+    <TextView
+        android:id="@+id/View_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:paddingLeft="@dimen/hotel_title_padding"
+        android:paddingTop="@dimen/hotel_title_padding"
+        android:paddingRight="@dimen/hotel_title_padding"
+        android:textAlignment="center"
+        android:textColor="@color/hotel_title"
+        android:textSize="35sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <TextView
+        android:id="@+id/View_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/View_title"
+        android:paddingLeft="@dimen/hotel_title_padding"
+        android:paddingRight="@dimen/hotel_title_padding"
+        android:paddingBottom="@dimen/hotel_rating_padding_bottom"
+        android:textColor="@android:color/background_dark"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/View_title" />
+
+    <TextView
+        android:id="@+id/View_rating"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/View_location"
+        android:paddingLeft="@dimen/hotel_title_padding"
+        android:paddingRight="@dimen/hotel_title_padding"
+        android:paddingBottom="@dimen/hotel_rating_padding_bottom"
+        android:textColor="@android:color/background_dark"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/View_location" />
+
+    <TextView
+        android:id="@+id/View_features"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/View_rating"
+        android:paddingLeft="@dimen/hotel_title_padding"
+        android:paddingRight="@dimen/hotel_title_padding"
+        android:paddingBottom="@dimen/hotel_rating_padding_bottom"
+        android:textColor="@android:color/background_dark"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/View_rating" />
+
+    <TextView
+        android:id="@+id/View_contact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/View_features"
+        android:paddingLeft="@dimen/hotel_title_padding"
+        android:paddingRight="@dimen/hotel_title_padding"
+        android:paddingBottom="@dimen/hotel_rating_padding_bottom"
+        android:textColor="@android:color/background_dark"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/View_features" />
+
+    <Button
+        android:id="@+id/View_book"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/View_contact"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/round"
+        android:bottomLeftRadius="20dp"
+        android:bottomRightRadius="20dp"
+        android:scaleType="centerCrop"
+        android:text="Book"
+        android:textColor="#ffffff"
+        android:textSize="25dp"
+        android:topLeftRadius="20dp"
+        android:topRightRadius="20dp"
+        android:typeface="monospace"
+        android:layout_marginBottom="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
