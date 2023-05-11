@@ -24,7 +24,7 @@ class LoginActivity : AppCompatActivity() {
             if(email.isNotEmpty() && password.isNotEmpty())
                 MainActivity.auth.signInWithEmailAndPassword(email, password).addOnCompleteListener {
                     if(it.isSuccessful){
-                        startActivity(Intent(this, HotelMenu::class.java))
+                        startActivity(Intent(this, BookingActivity::class.java))
                         finish()
                     }
                 }.addOnFailureListener {

@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         auth = FirebaseAuth.getInstance()
 
         if(auth.currentUser == null){
-            startActivity(Intent(this, RegisterActivity::class.java))
+                startActivity(Intent(this, LoginActivity::class.java))
             finish()
         }
 
@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.signIn.setOnClickListener {
-            startActivity(Intent(this, RegisterActivity::class.java))
+            startActivity(Intent(this, LoginActivity::class.java))
             finish()
         }
         binding.signOut.setOnClickListener {
