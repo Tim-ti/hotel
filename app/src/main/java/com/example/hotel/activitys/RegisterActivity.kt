@@ -1,4 +1,4 @@
-package com.example.hotel
+package com.example.hotel.activitys
 
 import android.content.Intent
 import android.os.Bundle

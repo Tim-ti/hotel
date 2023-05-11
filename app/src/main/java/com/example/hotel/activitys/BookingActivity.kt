@@ -1,9 +1,11 @@
-package com.example.hotel
+package com.example.hotel.activitys
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import com.example.hotel.models.BookingModel
+import com.example.hotel.R
 import com.example.hotel.databinding.ActivityBookingBinding
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
@@ -38,12 +40,12 @@ class BookingActivity : AppCompatActivity() {
 
             val bookingId = dbRef.push().key!!
 
-            val booking =BookingModel(bookingId,email,name, secName)
+            val booking = BookingModel(bookingId,email,name, secName)
 
             dbRef.child(bookingId).setValue(booking)
                 .addOnCompleteListener{
                     if(it.isSuccessful){
-                        startActivity(Intent(this, HotelMenu::class.java))
+                        startActivity(Intent(this, HotelMenuActivity::class.java))
                         finish()
                     }
                 }.addOnFailureListener {

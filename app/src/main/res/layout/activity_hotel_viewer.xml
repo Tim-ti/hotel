@@ -11,6 +11,7 @@
             xmlns:tools="http://schemas.android.com/tools"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+
             >
 
         </android.widget.RelativeLayout>
@@ -108,24 +109,11 @@
                 android:typeface="monospace"
 
                 />
-            <TextView
-                android:id="@+id/View_rec"
-                android:layout_width="match_parent"
-                android:paddingTop="20dp"
-                android:text="Recommendations"
-                android:layout_centerHorizontal="true"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/View_save"
-                android:paddingLeft="@dimen/hotel_title_padding"
-                android:paddingRight="@dimen/hotel_title_padding"
-                android:paddingBottom="@dimen/hotel_rating_padding_bottom"
-                android:textColor="@android:color/background_dark"
-                android:textSize="20dp"
-                />
+
 
         </RelativeLayout>
 
-        <include layout="@layout/rec_content_main" />
+
 
 
 

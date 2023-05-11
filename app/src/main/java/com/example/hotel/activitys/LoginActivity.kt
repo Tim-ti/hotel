@@ -1,4 +1,4 @@
-package com.example.hotel
+package com.example.hotel.activitys
 
 import android.content.Intent
 import android.os.Bundle
@@ -24,7 +24,7 @@ class LoginActivity : AppCompatActivity() {
             if(email.isNotEmpty() && password.isNotEmpty())
                 MainActivity.auth.signInWithEmailAndPassword(email, password).addOnCompleteListener {
                     if(it.isSuccessful){
-                        startActivity(Intent(this, BookingActivity::class.java))
+                        startActivity(Intent(this, HotelMenuActivity::class.java))
                         finish()
                     }
                 }.addOnFailureListener {

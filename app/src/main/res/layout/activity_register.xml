@@ -5,8 +5,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegisterActivity"
-    android:background="@drawable/palm2">
+    tools:context=".activitys.RegisterActivity"
+    android:background="@drawable/palm4">
 
 
     <com.google.android.material.imageview.ShapeableImageView

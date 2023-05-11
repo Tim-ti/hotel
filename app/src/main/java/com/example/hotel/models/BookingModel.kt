@@ -1,4 +1,4 @@
-package com.example.hotel
+package com.example.hotel.models
 
 data class BookingModel(
     var bookingId: String? = null,

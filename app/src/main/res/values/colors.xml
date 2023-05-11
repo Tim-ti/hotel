@@ -12,4 +12,5 @@
     <color name="colorAccent">#FF4081</color>
     <color name="viewBg">#f1f5f8</color>
     <color name="hotel_title">#4c4c4c</color>
+    <color name="divider_grey">#676666</color>
 </resources>
