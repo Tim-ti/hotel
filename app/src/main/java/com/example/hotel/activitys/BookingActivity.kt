@@ -27,7 +27,6 @@ class BookingActivity : AppCompatActivity() {
             val email = binding.edEmail.text.toString()
             val name = binding.edName.text.toString()
             val secName = binding.edSecName.text.toString()
-            val date = binding.edDate.text.toString()
 
             if(email.isEmpty()){
                 binding.edEmail.error = "Please enter Email"
@@ -38,13 +37,10 @@ class BookingActivity : AppCompatActivity() {
             if(secName.isEmpty()){
                 binding.edSecName.error = "Please enter Second name"
             }
-            if(date.isEmpty()){
-                binding.edSecName.error = "Please enter Second name"
-            }
 
             val bookingId = dbRef.push().key!!
 
-            val booking = BookingModel(bookingId,email,name, secName,date, hotelId=1)
+            val booking = BookingModel(bookingId,email,name, secName)
 
             dbRef.child(bookingId).setValue(booking)
                 .addOnCompleteListener{
@@ -55,7 +51,6 @@ class BookingActivity : AppCompatActivity() {
                 }.addOnFailureListener {
                     Toast.makeText(this, it.localizedMessage, Toast.LENGTH_LONG).show()
                 }
-
         }
 
 

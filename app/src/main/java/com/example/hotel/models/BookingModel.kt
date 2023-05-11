@@ -1,10 +1,10 @@
 package com.example.hotel.models
 
 data class BookingModel(
-    var id: String,
+    var bookingId: String,
     var email: String,
     var name: String,
-    var secName: String,
-    var date: String,
-    var hotelId: Int
-)
+    var secName: String
+){
+    constructor(): this("", "", "", "")
+}

@@ -10,23 +10,25 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.hotel.R
+import com.example.hotel.bitmapFromBase64
 import com.example.hotel.models.HotelModel
 
-class HotelAdapter (private val hotelList: ArrayList<HotelModel>) :
+class HotelAdapter(private val hotelList: ArrayList<HotelModel>) :
     RecyclerView.Adapter<HotelAdapter.HotelViewHolder>() {
 
     private lateinit var mListener: onItemClickListener
 
-    interface onItemClickListener{
+    interface onItemClickListener {
         fun onItemClick(position: Int)
     }
 
-    fun setOnItemClickListener(clickListener: onItemClickListener){
+    fun setOnItemClickListener(clickListener: onItemClickListener) {
         mListener = clickListener
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HotelViewHolder {
-        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.hotel_card, parent, false)
+        val itemView =
+            LayoutInflater.from(parent.context).inflate(R.layout.hotel_card, parent, false)
         return HotelViewHolder(itemView, mListener)
     }
 
@@ -40,22 +42,15 @@ class HotelAdapter (private val hotelList: ArrayList<HotelModel>) :
         rating.text = currentEmp.rating
         location.text = currentEmp.location
 
-        if(currentEmp.image != null) {
-            println("AAAAAAAAAAAA")
-            println(currentEmp.image)
-            val imageBytes = Base64.decode(currentEmp.image, Base64.DEFAULT)
-            val decodedImage = BitmapFactory.decodeByteArray(imageBytes, 0, imageBytes.size)
-            imageView.setImageBitmap(decodedImage)
-        } else {
-            imageView.setImageBitmap(null)
-        }
+        imageView.setImageBitmap(bitmapFromBase64(currentEmp.image))
     }
 
     override fun getItemCount(): Int {
         return hotelList.size
     }
 
-    class HotelViewHolder(val itemView: View, var clickListener: onItemClickListener) : RecyclerView.ViewHolder(itemView){
+    class HotelViewHolder(val itemView: View, var clickListener: onItemClickListener) :
+        RecyclerView.ViewHolder(itemView) {
         init {
             val button = itemView.findViewById<Button>(R.id.viewbutton)
             button.setOnClickListener {

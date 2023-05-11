@@ -1,21 +1,16 @@
 package com.example.hotel.activitys
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
-import android.widget.TextView
+import android.view.Menu
+import android.view.MenuItem
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.example.hotel.R
-import com.example.hotel.adapters.HistAdapter
 import com.example.hotel.adapters.HotelAdapter
-import com.example.hotel.databinding.ActivityHotelDetailsBinding
 import com.example.hotel.databinding.ActivityHotelMenuBinding
-import com.example.hotel.models.BookingModel
 import com.example.hotel.models.HotelModel
-import com.google.firebase.database.DatabaseReference
-
 import org.json.JSONArray
 
 
@@ -67,9 +62,22 @@ class HotelMenuActivity : AppCompatActivity() {
             }
 
         })
-
-
     }
 
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        val inflater = menuInflater
+        inflater.inflate(R.menu.tool_bar, menu)
+        return true
+    }
 
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        // Handle item selection
+        return when (item.itemId) {
+            R.id.show_bookings -> {
+                startActivity(Intent(this, BookingHistoryActivity::class.java))
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
+    }
 }

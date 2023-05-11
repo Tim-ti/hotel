@@ -9,12 +9,12 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/hotel_cover_height"
+        android:scaleType="fitCenter"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/hicon1" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/View_title"
@@ -94,6 +94,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/View_contact"
         android:layout_centerHorizontal="true"
+        android:layout_marginBottom="100dp"
         android:background="@drawable/round"
         android:bottomLeftRadius="20dp"
         android:bottomRightRadius="20dp"
@@ -104,7 +105,6 @@
         android:topLeftRadius="20dp"
         android:topRightRadius="20dp"
         android:typeface="monospace"
-        android:layout_marginBottom="100dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
